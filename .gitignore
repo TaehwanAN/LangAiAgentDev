@@ -1,5 +1,5 @@
 # Lecture
-.lecture
+.lecture/
 
 # Claude Code
 .claude/settings.local.json
