@@ -1,2 +1,8 @@
+langchain
+openai
+claude
+# gemini
 langchain-openai
 langchain-anthropic
+# langchain-gemini
+python-dotenv
