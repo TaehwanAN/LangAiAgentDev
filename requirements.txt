@@ -6,3 +6,6 @@ langchain-openai
 langchain-anthropic
 # langchain-gemini
 python-dotenv
+langchain-community
+sqlalchemy
+psycopg2-binary
