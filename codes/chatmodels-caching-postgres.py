@@ -44,19 +44,20 @@ set_llm_cache(SQLAlchemyCache(engine))
 
 # ── Model & prompt ─────────────────────────────────────────
 model = ChatAnthropic(model='claude-haiku-4-5')
-prompt = "Who is the president of North Korea?"
+prompt_1 = "Who is the president of North Korea?"
+prompt_2 = "Who is the president of Democratic Republic of Korea?"
 
 # ── 1st call: cache MISS → API call → result stored in DB ──
 print("1st call (cache miss)...")
 start = time.time()
-response_1 = model.invoke(prompt)
+response_1 = model.invoke(prompt_1)
 print(f"  Time   : {time.time() - start:.3f}s")
 print(f"  Answer : {response_1.content}\n")
 
 # ── 2nd call: cache HIT → result returned from Postgres ────
 print("2nd call (cache hit)...")
 start = time.time()
-response_2 = model.invoke(prompt)
+response_2 = model.invoke(prompt_2)
 print(f"  Time   : {time.time() - start:.3f}s")
 print(f"  Answer : {response_2.content}\n")
 
