@@ -1,0 +1,13 @@
+_type: prompt
+input_variables:
+- country
+- role
+metadata: null
+name: null
+optional_variables: []
+output_parser: null
+partial_variables: {}
+tags: null
+template: Who is the {role} of {country}
+template_format: f-string
+validate_template: false
